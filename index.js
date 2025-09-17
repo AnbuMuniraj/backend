@@ -10,12 +10,6 @@ const app = express();
 // ✅ Allow all origins (development only)
 app.use(cors());
 
-// ✅ Or allow specific origin (recommended)
-app.use(cors({
-  origin: "http://localhost:3001",  // or your React port
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
-}));
 connectDB(); 
 app.use(express.json());
 app.use("/api",useroute);
